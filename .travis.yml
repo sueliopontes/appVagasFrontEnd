@@ -4,5 +4,4 @@ node_js:
   - "7"
 deploy:
  provider: heroku
- api-key: $HEROKU_API_KEY
  app: appvagasfront
