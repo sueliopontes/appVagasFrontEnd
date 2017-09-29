@@ -1,0 +1,7 @@
+<div class="jumbotron">
+	<form name="escolaForm">
+		<input class="form-control" type="text" ng-model="escola.escolaNome" name="escolaNome" ng-required="true" value="escola.escolaNome" placeholder="Insira o nome da nova escola para cadastrar"/>
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="saveEscola(escola)" ng-disabled="escolaForm.$invalid">Salvar</button>
+</div>

@@ -1,0 +1,19 @@
+<div class="jumbotron">
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
+	<table ng-show="periodos.length > 0" class="table table-striped">
+		<tr>
+			<th></th>			
+			<th><a href="" ng-click="ordenarPor('nome')">Período</a></th>			
+		</tr>
+		
+		<tr ng-class="{'selecionado negrito': periodo.selecionado}" ng-repeat="periodo in periodos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			
+			<td><input type="checkbox" ng-model="periodo.selecionado"/></td>			
+			<td><a href="#/periodoEdit/{{periodo.periodoId}}">{{periodo.periodoNome}}</a></td>			
+		
+		</tr>
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/periodoNew">Adicionar</a>
+	<button class="btn btn-danger btn-block" ng-click="apagarPeriodos(periodos)" ng-disabled="!isPeriodosSelecionado(periodos)">Apagar</button>
+</div>

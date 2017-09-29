@@ -1,0 +1,19 @@
+<div class="jumbotron">
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
+	<table ng-show="anoLetivos.length > 0" class="table table-striped">
+		<tr>
+			<th></th>			
+			<th><a href="" ng-click="ordenarPor('nome')">Ano letivo</a></th>			
+		</tr>
+		
+		<tr ng-class="{'selecionado negrito': anoLetivo.selecionado}" ng-repeat="anoLetivo in anoLetivos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			
+			<td><input type="checkbox" ng-model="anoLetivo.selecionado"/></td>			
+			<td><a href="#/anoLetivoEdit/{{anoLetivo.anoId}}">{{anoLetivo.anoNome}}</a></td>			
+		
+		</tr>
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/anoLetivoNew">Adicionar</a>
+	<button class="btn btn-danger btn-block" ng-click="apagarAnoLetivos(anoLetivos)" ng-if="isAnoLetivosSelecionado(anoLetivos)">Apagar</button>
+</div>

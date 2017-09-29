@@ -1,0 +1,7 @@
+<div class="jumbotron">
+	<form name="escolaForm">
+		<input class="form-control" type="text" ng-model="escola.escolaNome" name="escolaNome" ng-required="true" placeholder="Insira o nome da nova escola"/>
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="adicionarEscola(escola)" ng-disabled="escolaForm.$invalid">Adicionar</button>
+</div>

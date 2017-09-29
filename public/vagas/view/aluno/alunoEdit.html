@@ -1,0 +1,9 @@
+<div class="jumbotron">
+	<form name="alunoForm">
+        <input class="form-control" type="text" ng-model="aluno.nome" name="nome" ng-required="true" value="aluno.nome" placeholder="Insira o nome do aluno"/>
+        <input class="form-control" type="text" ng-model="aluno.dataNascimento" name="nome" ng-required="true" value="aluno.dataNascimento" placeholder="Insira a data de nascimento"/>
+        <input class="form-control" type="text" ng-model="aluno.mae" name="nome" ng-required="true" value="aluno.mae" placeholder="Insira o nome da mãe"/>
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="saveAluno(aluno)" ng-disabled="alunoForm.$invalid">Salvar</button>
+</div>

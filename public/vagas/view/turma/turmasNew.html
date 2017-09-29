@@ -1,0 +1,17 @@
+<div class="jumbotron">
+	<form name="turmaForm">		
+		<select class="form-control" ng-model="turma.escola" ng-options="escola as escola.escolaNome for escola in escolas">
+			<option value="">Selecione uma escola</option>
+		</select>
+		<select class="form-control" ng-model="turma.ano" ng-options="anoLetivo as anoLetivo.anoNome  for anoLetivo in anoLetivos">
+			<option value="">Selecione o ano letivo</option>
+		</select>
+		<input class="form-control" type="text" ng-model="turma.turmaNome" name="turmaNome" ng-required="true" placeholder="Insira o nome da turma"/>
+		<select class="form-control" ng-model="turma.periodo" ng-options="periodo as periodo.periodoNome  for periodo in periodos">
+			<option value="">Selecione o período</option>
+		</select>
+		{{turma}}
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="adicionarTurma(turma)" ng-disabled="turmaForm.$invalid">Adicionar</button>
+</div>

@@ -1,0 +1,16 @@
+<div class="jumbotron">
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
+	<table ng-show="escolas.length > 0" class="table table-striped">
+		<tr>
+			<th></th>			
+			<th><a href="" ng-click="ordenarPor('nome')">Nome da escola</a></th>			
+		</tr>
+		<tr ng-class="{'selecionado negrito': escola.selecionado}" ng-repeat="escola in escolas | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			<td><input type="checkbox" ng-model="escola.selecionado"/></td>			
+			<td><a href="#/escolaEdit/{{escola.escolaId}}">{{escola.escolaNome | name}}</a></td>			
+		</tr>
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/escolaNew">Adicionar</a>
+	<button class="btn btn-danger btn-block" ng-click="apagarEscolas(escolas)" ng-disabled="!isEscolasSelecionado(escolas)">Apagar</button>
+</div>

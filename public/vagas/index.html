@@ -1,0 +1,78 @@
+<html ng-app="escola">
+	<meta charset="UTF-8">
+	<title>Sistema Vagas</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/ui.css">
+	
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular/angular-messages.js"></script>
+	<script src="js/app.js"></script>
+	<script src="lib/ui/ui.js"></script>
+	
+	<script src="js/value/configValue.js"></script>
+	<script src="js/filters/nameFilter.js"></script>
+	<script src="js/filters/ellipsisFilter.js"></script>
+	<script src="js/directives/uiAlertDirective.js"></script>		
+	<script src="js/interceptors/errorInterceptor.js"></script>
+
+	
+	<script src="js/config/interceptor/interceptorsConfig.js"></script>
+
+	<script src="js/config/router/routeConfig.js"></script>
+	<script src="js/config/router/alunoRouter.js"></script>	
+	<script src="js/config/router/escolaRouter.js"></script>	
+	<script src="js/config/router/periodoRouter.js"></script>	
+	<script src="js/config/router/anoLetivoRouter.js"></script>	
+	<script src="js/config/router/turmaRouter.js"></script>	
+	<script src="js/config/router/loginRouter.js"></script>	
+
+
+	<script src="js/services/escolaAPIService.js"></script>	
+	<script src="js/services/alunoAPIService.js"></script>	
+	<script src="js/services/loginAPIService.js"></script>	
+	<script src="js/services/anoLetivoAPIService.js"></script>
+	<script src="js/services/periodoAPIService.js"></script>	
+	<script src="js/services/turmaAPIService.js"></script>
+		
+
+	
+	<script src="js/controllers/aluno/alunoCtrl.js"></script>
+	<script src="js/controllers/aluno/alunoEditCtrl.js"></script>
+	<script src="js/controllers/aluno/alunoNewCtrl.js"></script>
+
+	<script src="js/controllers/escola/escolaCtrl.js"></script>
+	<script src="js/controllers/escola/escolaNewCtrl.js"></script>
+	<script src="js/controllers/escola/escolaEditCtrl.js"></script>
+
+	<script src="js/controllers/login/loginCtrl.js"></script>
+	<script src="js/controllers/login/loginEditCtrl.js"></script>
+	<script src="js/controllers/login/loginNewCtrl.js"></script>
+
+	<script src="js/controllers/anoLetivo/anoLetivoCtrl.js"></script>
+	<script src="js/controllers/anoLetivo/anoLetivoEditCtrl.js"></script>
+	<script src="js/controllers/anoLetivo/anoLetivoNewCtrl.js"></script>
+
+	<script src="js/controllers/periodo/periodoCtrl.js"></script>
+	<script src="js/controllers/periodo/periodoEditCtrl.js"></script>
+	<script src="js/controllers/periodo/periodoNewCtrl.js"></script>
+
+	<script src="js/controllers/turma/turmaCtrl.js"></script>
+	<script src="js/controllers/turma/turmaEditCtrl.js"></script>
+	<script src="js/controllers/turma/turmaNewCtrl.js"></script>
+
+	
+
+<body>
+	<div class="jumbotron" ng-show="loading">
+		<h5>Carregando, por favor aguarde...</h5>
+	</div>
+	<div ng-hide="loading">
+		<div ng-include="'view/header.html'"></div>
+		<div ng-include="'view/menu.html'"></div>
+		<div ng-view></div>
+		<div ng-include="'view/footer.html'"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<div class="jumbotron">
+	<form name="turmaForm">
+		<input class="form-control" type="text" ng-model="turma.escola.escolaNome" name="escolaNome" ng-required="true" value="turmma.escola.escolaNome" placeholder="Insira o nome da escola "/>
+		<input class="form-control" type="text" ng-model="turma.ano.anoNome" name="anoNome" ng-required="true" value="turma.ano.anoNome" placeholder="Insira o ano letivo"/>
+		<input class="form-control" type="text" ng-model="turma.turmaNome" name="turmaNome" ng-required="true" value="turma.turmaNome" placeholder="Insira o nome da turma"/>
+		<input class="form-control" type="text" ng-model="turma.periodo.periodoNome" name="periodoNome" ng-required="true" value="turma.periodo.periodoNome" placeholder="Insira o período"/>
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="saveTurma(turma)" ng-disabled="turmaForm.$invalid">Salvar</button>
+</div>

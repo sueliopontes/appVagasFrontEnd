@@ -1,0 +1,9 @@
+<div class="jumbotron">
+	<form name="loginForm">
+		<input class="form-control" type="text" ng-model="login.username" name="login" ng-required="true" placeholder="login"/>
+		<input class="form-control" type="text" ng-model="login.password" name="senha" ng-required="true" placeholder="senha"/>
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="autenticar(login)" ng-disabled="loginForm.$invalid">Acessar</button>
+	<button class="btn btn-danger btn-block"  ng-click="" ng-disabled="loginForm.$invalid">Esqueci minha senha</button>
+</div>
