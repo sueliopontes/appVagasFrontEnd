@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "name": "appVagasFrontEnd",
+  "version": "1.0.0",
+  "description": "Projeto Fatec - appVagas Front-end",
   "engines": {
     "node": "6.11.1"
   },
@@ -9,9 +9,10 @@
   "scripts": {
     "start": "node index.js"    
   },
-  "dependencies": {
-    "ejs": "2.5.6",
-    "express": "4.15.2"
+  "dependencies": {    
+    "express": "4.15.2",
+    "consolidate" : "0.4.x", 
+    "swig": "0.12.x" 
   },
   "devDependencies": {
     "request": "^2.81.0",
@@ -19,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/sueliopontes/appVagasFrontEnd"
   },
   "keywords": [
     "node",
