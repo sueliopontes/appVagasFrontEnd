@@ -1,6 +1,6 @@
 # Projeto Fatec TG - App Vagas - Front-end
 
-# Tecnoligias utilizadas
+# Tecnologias utilizadas
 - Node.js app using [Express 4]
 - AngularJS 1.5
 - Bootstrap
