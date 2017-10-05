@@ -1,0 +1,10 @@
+<div class="jumbotron">
+		<form name="inscricaoForm">
+			<input class="form-control" type="text" ng-model="inscrito aluno.alunoNome" name="alunoNome" ng-required="true" value="inscrito.aluno.alunoNome" placeholder="Nome do aluno"/>
+			<select class="form-control" ng-model="inscrito.turma" ng-options="turma as turma.turmaNome for turma in turmas">
+				<option value="">Selecione uma turma</option>
+			</select> 
+		</form>		
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="saveInscrito(inscrito)" ng-disabled="inscritoForm.$invalid">Salvar</button>
+</div>

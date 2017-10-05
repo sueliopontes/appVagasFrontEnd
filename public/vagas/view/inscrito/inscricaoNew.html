@@ -1,0 +1,13 @@
+<div class="jumbotron">
+	<form name="inscricaoForm">
+		<select class="form-control" ng-model="inscrito.aluno" ng-options="aluno as aluno.alunoNome for aluno in alunos">
+			<option value="">Selecione um aluno</option>
+		</select> 
+		<select class="form-control" ng-model="inscrito.turma" ng-options="turma as turma.turmaNome for turma in turmas">
+			<option value="">Selecione um aluno</option>
+		</select> 
+		
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="adicionarInscrito(inscrito)" ng-disabled="inscritoForm.$invalid">Adicionar</button>
+</div>

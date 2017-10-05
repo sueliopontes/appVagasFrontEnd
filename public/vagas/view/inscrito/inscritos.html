@@ -1,0 +1,23 @@
+<div class="jumbotron">
+	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
+	<table ng-show="inscritos.length > 0" class="table table-striped">
+		<tr>
+			<th></th>			
+			<th><a href="" ng-click="ordenarPor('aluno')">Nome da aluno</a></th>			
+			<th><a href="" ng-click="ordenarPor('dataNascimento')">Data de Nascimento</a></th>			
+			<th><a href="" ng-click="ordenarPor('mae')">Nome da mãe</a></th>			
+			<th><a href="" ng-click="ordenarPor('status')">Situação</a></th>
+		</tr>
+		<tr ng-class="{'selecionado negrito': inscrito.selecionado}" ng-repeat="inscrito in inscritos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			<td><input type="checkbox" ng-model="inscrito.selecionado"/></td>			
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.nome | name}}</a></td>
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.dataNascimento | name}}</a></td>
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.mae | name}}</a></td>			
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.status | name}}</a></td>			
+		</tr>
+		
+	</table>
+	<hr/>
+	<a class="btn btn-primary btn-block" href="#/inscritoNew">Adicionar</a>
+	<button class="btn btn-danger btn-block" ng-click="apagarInscritos(inscritos)" ng-disabled="!isInscritosSelecionado(inscritos)">Apagar</button>
+</div>
