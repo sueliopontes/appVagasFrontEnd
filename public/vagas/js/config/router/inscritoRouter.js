@@ -11,7 +11,15 @@ angular.module("escola").config(function ($routeProvider) {
 	});
 	$routeProvider.when("/inscritoNew", {
 		templateUrl: "view/inscrito/inscritoNew.html",
-		controller: "inscritoNewCtrl"			
+		controller: "inscritoNewCtrl",
+		resolve:{
+			turmas:function(turmaAPI) {
+				return turmaAPI.getTurmas();
+			},
+			alunos:function(alunoAPI) {
+				return alunoAPI.getAlunos();
+			}
+		}		
 	});
 
 	$routeProvider.when("/inscritoEdit/:id", {
