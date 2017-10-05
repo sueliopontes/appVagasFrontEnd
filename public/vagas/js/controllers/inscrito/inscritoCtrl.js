@@ -18,7 +18,7 @@ angular.module("escola").controller("inscritoCtrl", function ($scope, inscritos,
 		
 	};
 
-	$scope.isinscritosSelecionado = function (inscritos) {
+	$scope.isInscritosSelecionado = function (inscritos) {
 		return inscritos.some(function (inscrito) {
 			return inscrito.selecionado;
 		});

@@ -1,20 +1,20 @@
 angular.module("escola").factory("inscritoAPI", function ($http,val) {
 	var _getInscritos = function () {
-		return $http.get(val.baseUrl + "/inscrito/findByAll");
+		return $http.get(val.baseUrl + "/inscritos/findByAll");
 	};
 
 	var _getInscrito = function (id) {
-		return $http.get(val.baseUrl + "/inscrito/findById/" + id);
+		return $http.get(val.baseUrl + "/inscritos/findById/" + id);
 	};
 
 	var _saveInscrito = function (inscrito) {
 		console.log(inscrito);
-		return $http.post(val.baseUrl + "/inscrito/save", inscrito);
+		return $http.post(val.baseUrl + "/inscritos/save", inscrito);
 	};
 
 	var _deleteInscritos = function (inscritos) {
 		
-		return $http.post(val.baseUrl + "/inscrito/delete", inscritos);
+		return $http.post(val.baseUrl + "/inscritos/delete", inscritos);
 	};
 
 	return {
