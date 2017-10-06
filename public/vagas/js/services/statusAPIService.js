@@ -1,4 +1,4 @@
-angular.module("status").factory("statusAPI", function ($http,val) {
+angular.module("escola").factory("statusAPI", function ($http,val) {
 	var _getStatus = function () {
 		return $http.get(val.baseUrl + "/status/findByAll");
 	};
