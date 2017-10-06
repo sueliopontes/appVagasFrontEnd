@@ -1,10 +1,10 @@
 <div class="jumbotron">
 	<form name="inscricaoForm">
-		<select class="form-control" ng-model="inscrito.aluno" ng-options="aluno as aluno.alunoNome for aluno in alunos">
+		<select class="form-control" ng-model="inscrito.aluno" ng-options="aluno as aluno.nome for aluno in alunos">
 			<option value="">Selecione um aluno</option>
 		</select> 
 		<select class="form-control" ng-model="inscrito.turma" ng-options="turma as turma.turmaNome for turma in turmas">
-			<option value="">Selecione um aluno</option>
+			<option value="">Selecione uma turma</option>
 		</select> 
 		
 	</form>	
