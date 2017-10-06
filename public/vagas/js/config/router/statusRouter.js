@@ -20,7 +20,7 @@ angular.module("escola").config(function ($routeProvider) {
 		controller: "statusEditCtrl",
 		resolve: {
 			status: function (statusAPI, $route) {
-				return statusAPI.getStatus($route.current.params.id);
+				return statusAPI.getStatusId($route.current.params.id);
 			}
 		}
 	});

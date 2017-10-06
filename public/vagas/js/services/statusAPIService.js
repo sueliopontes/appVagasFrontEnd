@@ -3,7 +3,7 @@ angular.module("escola").factory("statusAPI", function ($http,val) {
 		return $http.get(val.baseUrl + "/status/findByAll");
 	};
 
-	var _getStatus = function (id) {
+	var _getStatusId = function (id) {
 		return $http.get(val.baseUrl + "/status/findById/" + id);
 	};
 
@@ -18,7 +18,7 @@ angular.module("escola").factory("statusAPI", function ($http,val) {
 	};
 
 	return {
-		getStatus: _getStatus,
+		getStatusId: _getStatusId,
 		getStatus: _getStatus,
 		saveStatus: _saveStatus,
 		deleteStatus: _deleteStatus
