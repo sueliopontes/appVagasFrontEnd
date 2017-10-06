@@ -6,6 +6,9 @@
 		<select class="form-control" ng-model="inscrito.turma" ng-options="turma as turma.turmaNome for turma in turmas">
 			<option value="">Selecione uma turma</option>
 		</select> 
+		<select class="form-control" ng-model="inscrito.status" ng-options="statusOne as statusOne.statusNome for statusOne in status">
+			<option value="">Selecione a situação</option>
+		</select>
 		
 	</form>	
 	<hr/>

@@ -1,0 +1,7 @@
+<div class="jumbotron">
+	<form name="statusForm">
+		<input class="form-control" type="text" ng-model="status.statusNome" name="statusNome" ng-required="true" placeholder="Insira o nome do novo tipo de situação"/>
+	</form>	
+	<hr/>
+	<button class="btn btn-danger btn-block"  ng-click="adicionarStatus(status)" ng-disabled="statusForm.$invalid">Adicionar</button>
+</div>

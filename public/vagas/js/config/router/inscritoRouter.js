@@ -18,6 +18,9 @@ angular.module("escola").config(function ($routeProvider) {
 			},
 			alunos:function(alunoAPI) {
 				return alunoAPI.getAlunos();
+			},
+			status:function(statusAPI) {
+				return statusAPI.getStatus();
 			}
 		}		
 	});
