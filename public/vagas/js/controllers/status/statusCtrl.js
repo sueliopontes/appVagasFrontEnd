@@ -10,7 +10,7 @@ angular.module("escola").controller("statusCtrl", function ($scope, status,$loca
 			if(!statusOne.selecionado) return statusOne;
 		});
 		
-		statusOneAPI.deleteStatus(statusApagar).success(function (data) {
+		statusAPI.deleteStatus(statusApagar).success(function (data) {
 			$scope.status = statusRestantes;	
 
 		}).error(function(data,status){							

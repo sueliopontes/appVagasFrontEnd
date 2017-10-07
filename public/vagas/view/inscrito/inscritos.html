@@ -5,7 +5,8 @@
 			<th></th>			
 			<th><a href="" ng-click="ordenarPor('aluno')">Nome da aluno</a></th>			
 			<th><a href="" ng-click="ordenarPor('dataNascimento')">Data de Nascimento</a></th>			
-			<th><a href="" ng-click="ordenarPor('mae')">Nome da mãe</a></th>			
+			<th><a href="" ng-click="ordenarPor('mae')">Nome da mãe</a></th>	
+			<th><a href="" ng-click="ordenarPor('turma')">Turma</a></th>		
 			<th><a href="" ng-click="ordenarPor('status')">Situação</a></th>
 			<th></th>
 			<th></th>
@@ -13,13 +14,14 @@
 		</tr>
 		<tr ng-class="{'selecionado negrito': inscrito.selecionado}" ng-repeat="inscrito in inscritos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			<td><input type="checkbox" ng-model="inscrito.selecionado"/></td>			
-			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.nome | name}}</a></td>
-			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.dataNascimento | name}}</a></td>
-			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.mae | name}}</a></td>			
-			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.status | name}}</a></td>
-			<td><a href="#/inscritoEditStatusEspera/{{inscrito.id}}"><img src="imagens/espera.jpg" alt="Aguardando" height="42" width="42"></a></td>
-			<td><a href="#/inscritoEditStatusMatricular/{{inscrito.id}}"><img src="imagens/matricular.jpg" alt="Matricular" height="42" width="42"></a></td>	
-			<td><a href="#/inscritoEditStatusApagar/{{inscrito.id}}"><img src="imagens/excluir.png" alt="Excluir" height="42" width="42"></a></td>		
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.aluno.nome | name}}</a></td>
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.aluno.dataNascimento | name}}</a></td>
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.aluno.mae | name}}</a></td>
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.turma.turmaNome | name}}</a></td>			
+			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.status.statusNome | name}}</a></td>
+			<td><a href="#/inscritoEditStatusEspera/{{inscrito.id}}"><img src="imagens/esperar.jpg" alt="Aguardando" height="32" width="32"></a></td>
+			<td><a href="#/inscritoEditStatusMatricular/{{inscrito.id}}"><img src="imagens/matricular.jpg" alt="Matricular" height="32" width="32"></a></td>	
+			<td><a href="#/inscritoEditStatusApagar/{{inscrito.id}}"><img src="imagens/excluir.png" alt="Excluir" height="32" width="32"></a></td>		
 		</tr>
 		
 	</table>

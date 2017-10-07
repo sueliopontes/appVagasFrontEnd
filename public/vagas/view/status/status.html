@@ -7,7 +7,7 @@
 		</tr>
 		<tr ng-class="{'selecionado negrito': statusOne.selecionado}" ng-repeat="statusOne in status | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 			<td><input type="checkbox" ng-model="statusOne.selecionado"/></td>			
-			<td><a href="#/statusEdit/{{statusOne.statusOneId}}">{{statusOne.statusNome | name}}</a></td>			
+			<td><a href="#/statusEdit/{{statusOne.statusId}}">{{statusOne.statusNome | name}}</a></td>			
 		</tr>
 	</table>
 	<hr/>
