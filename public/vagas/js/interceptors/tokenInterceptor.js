@@ -10,14 +10,23 @@ angular.module("escola").factory("tokenInterceptor", function ($q, $timeout,$loc
 			return $q.reject(rejection);
 		},
 		response: function (response) {
-			console.log("response");
+			console.log("response");	
 			if (response.status === 401 || response.status === 403) {
-		        $location.path('/login');
-		      }		
+				console.log("Erro 403 - Acesso restrito")
+				$location.path("/restrito");
+			}			
 			return response;
 		},
 		responseError: function (rejection) {
 			console.log("responseError");
+			if (rejection.status === 401) {
+				console.log("Erro 401 - Acesso restrito")
+				$location.path("/restrito");
+			}
+			if (rejection.status === 403) {
+				console.log("Erro 403 - Acesso restrito")
+				$location.path("/restrito");
+			}			
 						
 			return $q.reject(rejection);
 		}

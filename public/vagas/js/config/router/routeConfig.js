@@ -10,6 +10,9 @@ angular.module("escola").config(function ($routeProvider) {
 	$routeProvider.when("/error", {
 		templateUrl: "view/error.html"
 	});
+	$routeProvider.when("/restrito", {
+		templateUrl: "view/restrito.html"
+	});
 
 	$routeProvider.when("/noPage", {
 		templateUrl: "view/noPage.html"
