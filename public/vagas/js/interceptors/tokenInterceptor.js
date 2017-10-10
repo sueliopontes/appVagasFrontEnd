@@ -1,26 +1,24 @@
 angular.module("escola").factory("tokenInterceptor", function ($q, $timeout,$location) {
 	return {
 		request: function (config) {
-			//console.log("responseError");
+			console.log("request");
 			config.headers.Authorization= 'Bearer ' + localStorage.getItem("userToken");
 			return config;
 		},
 		requestError: function (rejection) {
-			console.log("responseError");
+			console.log("requestError");
 			return $q.reject(rejection);
 		},
 		response: function (response) {
-			if(response.status==500){
-				$location.path("/login");
-			}
-			$timeout(function () {
-				//console.log("Fazer algo aqui");
-			}, 0); //numero zero indica tempo
+			console.log("response");
+			if (response.status === 401 || response.status === 403) {
+		        $location.path('/login');
+		      }		
 			return response;
 		},
 		responseError: function (rejection) {
 			console.log("responseError");
-			console.log(rejection);			
+						
 			return $q.reject(rejection);
 		}
 	};

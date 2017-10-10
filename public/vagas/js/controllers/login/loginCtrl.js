@@ -1,15 +1,13 @@
-angular.module("escola").controller("loginCtrl", function ($scope, loginAPI,$location,$http,val) {		
+angular.module("escola").controller("loginCtrl", function ($scope,$http,val,$location,$q) {		
 	
-	$scope.autenticar = function (login) {	
-		$http.post(val.baseUrl + "/login", login ).then(function(response) {
-			console.log($http.defaults.headers.common['token']);
-			localStorage.setItem("userToken", "oi")
+	$scope.autenticar = function (login) {		
+		var defeered = $q.defer();
+		$http.post(val.baseUrl + "/login", login ).then(function(response) {			
+			console.log(response.headers('Token'));			
+			localStorage.setItem("userToken",response.headers('Token'));
 			
-		//loginAPI.autenticar(login).success(function (data) {			
-			//console.log("Logado com sucesso");
-		//}).error(function(response){
-		//	console.log("Falha ao logar");	
-		//	console.log(data);	
-		});		
+		}).catch(defeered.reject);
+			//console.log("Falha -- autenticado");	
+		return defeered.promise;
 	};	
 });

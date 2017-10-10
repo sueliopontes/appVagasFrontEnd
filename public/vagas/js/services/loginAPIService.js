@@ -1,21 +1,16 @@
-angular.module("escola").factory("loginAPI", function ($http,val) {
-	
-	var _autenticar2 = function (login) {
-		return $http.post(val.baseUrl + "/login", login ).success(function(data, status, headers, config) {
-			console.log(data.Token);
-			localStorage.setItem("userToken", data.Token);
-			
-		}).error(function(data, status, headers, config) {
-			console.log("Falha -- autenticado");			
-		});
-	};
+angular.module("escola").factory("loginAPI", function ($http,val,$q) {
 	
 	var _autenticar = function (login) {
+		var defeered = $q.defer();
 		$http.post(val.baseUrl + "/login", login ).then(function(response) {
-			console.log(response.headers('Token'));
-			localStorage.setItem("userToken", data.Token);
-			return response;
-		});
+			console.log(response.data.Token);
+			
+			localStorage.setItem("userToken","oi");
+			
+		}).catch(defeered.reject);
+			//console.log("Falha -- autenticado");	
+		return defeered.promise;
+		
 	};	
 
 	return {

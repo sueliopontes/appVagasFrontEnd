@@ -1,22 +1,21 @@
-angular.module("escola").factory("loadingInterceptor", function ($q) {
+angular.module("escola").factory("loadingInterceptor", function ($q, $rootScope, $timeout) {
 	return {
 		request: function (config) {
-			console.log("request");
-			//config.headers.Authorization='Bearer ' + localStorage.getItem("userToken");			
+			$rootScope.loading = true;
 			return config;
 		},
 		requestError: function (rejection) {
-			console.log("requestError");
+			$rootScope.loading = false;
 			return $q.reject(rejection);
 		},
-		response: function (config) {
-			console.log("response");
-			//console.log(config.headers.Authorization);
-			return config;
+		response: function (response) {
+			$timeout(function () {
+				$rootScope.loading = false;
+			}, 0);
+			return response;
 		},
 		responseError: function (rejection) {
-			console.log("responseError");
-			console.log(rejection);			
+			$rootScope.loading = false;
 			return $q.reject(rejection);
 		}
 	};
