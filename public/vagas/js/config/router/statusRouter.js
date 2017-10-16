@@ -3,6 +3,7 @@ angular.module("escola").config(function ($routeProvider) {
 	$routeProvider.when("/status", {
 		templateUrl: "view/status/status.html",
 		controller: "statusCtrl",
+		authorize: true,
 		resolve:{
 			status:function(statusAPI) {
 				return statusAPI.getStatus();

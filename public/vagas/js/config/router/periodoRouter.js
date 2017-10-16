@@ -3,6 +3,7 @@ angular.module("escola").config(function ($routeProvider) {
 	$routeProvider.when("/periodos", {
 		templateUrl: "view/periodo/periodo.html",
 		controller: "periodoCtrl",
+		authorize: true,
 		resolve: {
 			periodos: function (periodoAPI) {
 				return periodoAPI.getPeriodos();

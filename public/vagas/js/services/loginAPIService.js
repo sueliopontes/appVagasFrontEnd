@@ -5,7 +5,7 @@ angular.module("escola").factory("loginAPI", function ($http,val,$q) {
 		$http.post(val.baseUrl + "/login", login ).then(function(response) {
 			console.log(response.data.Token);
 			
-			localStorage.setItem("userToken","oi");
+			localStorage.setItem("token","oi");
 			
 		}).catch(defeered.reject);
 			//console.log("Falha -- autenticado");	
