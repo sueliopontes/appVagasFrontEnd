@@ -3,7 +3,7 @@ angular.module("escola").config(function ($routeProvider) {
 	$routeProvider.when("/anoLetivo", {
 		templateUrl: "view/anoLetivo/anoLetivo.html",
 		controller: "anoLetivoCtrl",
-		authorize: true,
+		
 		resolve:{
 			anoLetivos:function(anoLetivoAPI) {
 				return anoLetivoAPI.getAnoLetivos();

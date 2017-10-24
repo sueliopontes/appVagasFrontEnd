@@ -3,7 +3,7 @@ angular.module("escola").config(function ($routeProvider) {
 	$routeProvider.when("/alunos", {
 		templateUrl: "view/aluno/alunos.html",
 		controller: "alunoCtrl",
-		authorize: true,
+		
 		resolve:{
 			alunos:function(alunoAPI) {
 				return alunoAPI.getAlunos();

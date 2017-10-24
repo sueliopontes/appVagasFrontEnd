@@ -3,7 +3,7 @@ angular.module("escola").config(function ($routeProvider) {
 	$routeProvider.when("/turmas", {
 		templateUrl: "view/turma/turmas.html",
 		controller: "turmaCtrl",
-		authorize: true,
+		
 		resolve:{
 			turmas:function(turmaAPI) {
 				return turmaAPI.getTurmas();

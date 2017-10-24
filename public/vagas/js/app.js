@@ -1,5 +1,6 @@
 angular.module('escola', ['ngMessages', 'ui', 'ngRoute']);
 
+/*
 angular.module('escola').run(function ($rootScope, $route, $routeParams, $location,TokenAPI) {
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
     	console.log('Nome do Evento:'+event.name);
@@ -11,7 +12,7 @@ angular.module('escola').run(function ($rootScope, $route, $routeParams, $locati
             /* Ugly way
             event.preventDefault();
             $location.path('/login');
-            ========================== */
+            ========================== */ /*
 
            $rootScope.$evalAsync(function () {
            $location.path("/restrito");
@@ -26,3 +27,5 @@ angular.module('escola').run(function ($rootScope, $route, $routeParams, $locati
       });
 
     });
+
+*/

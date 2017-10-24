@@ -3,7 +3,7 @@ angular.module("escola").config(function ($routeProvider) {
 	$routeProvider.when("/inscritos", {
 		templateUrl: "view/inscrito/inscritos.html",
 		controller: "inscritoCtrl",
-		authorize: true,
+		
 		resolve:{
 			inscritos:function(inscritoAPI) {
 				return inscritoAPI.getInscritos();
