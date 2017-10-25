@@ -30,6 +30,7 @@
 	<script src="js/config/router/loginRouter.js"></script>	
 	<script src="js/config/router/inscritoRouter.js"></script>
 	<script src="js/config/router/statusRouter.js"></script>
+	<script src="js/config/router/publicRouter.js"></script>
 		
 
 
@@ -76,17 +77,17 @@
 	<script src="js/controllers/status/statusEditCtrl.js"></script>
 	<script src="js/controllers/status/statusNewCtrl.js"></script>
 
+	<script src="js/controllers/public/publicCtrl.js"></script>
+
 	
 
 <body>
 	<div class="jumbotron" ng-show="loading">
 		<h5>Carregando, por favor aguarde...</h5>
 	</div>
-	<div ng-hide="loading">
-		<div ng-include="'view/header.html'"></div>
-		<div ng-include="'view/menu.html'"></div>
-		<div ng-view></div>
-		<div ng-include="'view/footer.html'"></div>
+	<div ng-hide="loading">		
+		<div ng-view></div>	
+		<center><img src="/imagens/brasao.png" alt="Brasão" height="45" width="45"></center>	
 	</div>
 </body>
 </html>

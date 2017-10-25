@@ -1,0 +1,30 @@
+<div ng-include="'view/header.html'"></div>
+	<div class="jumbotron">
+			<div class="alert alert-success" role="alert">Lista de espera </div>
+	<div>
+			<select class="form-control" ng-model="escola.id" ng-options="escola as escola.escolaNome for escola in escolas">
+		<option value="">Selecione uma escola</option>
+	</select> 
+	<button class="btn btn-danger btn-block"  ng-click="carregarInscritos(escola)" ng-disabled="inscritoForm.$invalid">Exibir lista</button>
+</div>
+	
+	<table ng-show="inscritos.length > 0" class="table table-striped">
+		<tr>						
+			<th><a href="">Nome da aluno</a></th>			
+			<th><a href="">Data de Nascimento</a></th>			
+			<th><a href="">Nome da mãe</a></th>	
+			<th><a href="">Turma</a></th>		
+			<th><a href="">Situação</a></th>
+			
+		</tr>
+		<tr ng-repeat="inscrito in inscritos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
+			<td><a href="">{{inscrito.aluno.nome | name}}</a></td>
+			<td><a href="">{{inscrito.aluno.dataNascimento | name}}</a></td>
+			<td><a href="">{{inscrito.aluno.mae | name}}</a></td>
+			<td><a href="">{{inscrito.turma.turmaNome | name}}</a></td>			
+			<td><a href="">{{inscrito.status.statusNome | name}}</a></td>
+		</tr>		
+	</table>
+</div>
+
+<div ng-include="'view/footer.html'"></div>

@@ -1,3 +1,6 @@
+<div ng-include="'view/header.html'"></div>
+<div ng-include="'view/menu.html'"></div>
+
 <div class="jumbotron">
 	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
 	<table ng-show="alunos.length > 0" class="table table-striped">
@@ -19,3 +22,5 @@
 	<a class="btn btn-primary btn-block" href="#/alunoNew">Adicionar</a>
 	<button class="btn btn-danger btn-block" ng-click="apagarAlunos(alunos)" ng-disabled="!isAlunosSelecionado(alunos)">Apagar</button>
 </div>
+
+<div ng-include="'view/footer.html'"></div>

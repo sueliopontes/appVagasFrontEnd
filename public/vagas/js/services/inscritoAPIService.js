@@ -3,6 +3,10 @@ angular.module("escola").factory("inscritoAPI", function ($http,val) {
 		return $http.get(val.baseUrl + "/inscritos/findByAll");
 	};
 
+	var _getInscritosByEscola = function (id) {
+		return $http.get(val.baseUrl + "/inscritos/findByEscola" + id);
+	};
+
 	var _getInscrito = function (id) {
 		return $http.get(val.baseUrl + "/inscritos/findById/" + id);
 	};
@@ -21,7 +25,8 @@ angular.module("escola").factory("inscritoAPI", function ($http,val) {
 		getInscritos: _getInscritos,
 		getInscrito: _getInscrito,
 		saveInscrito: _saveInscrito,
-		deleteInscritos: _deleteInscritos
+		deleteInscritos: _deleteInscritos,
+		getInscritosByEscola: _getInscritosByEscola
 	};
 });
 

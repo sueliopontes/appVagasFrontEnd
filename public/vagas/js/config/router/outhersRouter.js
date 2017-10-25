@@ -1,8 +1,10 @@
 angular.module("escola").config(function ($routeProvider) {
 	
+	/* A rota '/' foi configurada no arquivo publicRouter.js"
 	$routeProvider.when("/", {
-		templateUrl: "view/inicio.html"
+		templateUrl: "view/public/public.html"
 	});
+	*/
 	$routeProvider.when("/inicio", {
 		templateUrl: "view/inicio.html"
 	});	
