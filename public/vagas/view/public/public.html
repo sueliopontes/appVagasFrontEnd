@@ -2,12 +2,12 @@
 	<div class="jumbotron">
 			<div class="alert alert-success" role="alert">Lista de espera </div>
 	<div>
-			<select class="form-control" ng-model="escola.id" ng-options="escola as escola.escolaNome for escola in escolas">
+			<select class="form-control" ng-model="escola" ng-options="escola as escola.escolaNome for escola in escolas">
 		<option value="">Selecione uma escola</option>
 	</select> 
-	<button class="btn btn-danger btn-block"  ng-click="carregarInscritos(escola)" ng-disabled="inscritoForm.$invalid">Exibir lista</button>
+	<button class="btn btn-danger btn-block"  ng-click="carregarInscritos(escola.escolaId)" ng-disabled="inscritoForm.$invalid">Exibir lista</button>
 </div>
-	
+	{{escola.escolaId}}
 	<table ng-show="inscritos.length > 0" class="table table-striped">
 		<tr>						
 			<th><a href="">Nome da aluno</a></th>			
