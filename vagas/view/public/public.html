@@ -1,4 +1,4 @@
-<div ng-include="'view/header.html'"></div>
+<!--<div ng-include="'view/header.html'"></div>-->
 
 	<div class="jumbotron">
 	<a class="btn btn-warning"   href="#login">Login</a>
@@ -8,8 +8,8 @@
 		<option value="">Selecione uma escola</option>
 	</select> 
 	<button class="btn btn-danger btn-block"  ng-click="carregarInscritos(escola.escolaId)" ng-disabled="inscritoForm.$invalid">Exibir lista</button>
-</div>
-	{{escola.escolaId}}
+</di>	
+	<div class="alert alert-warning" role="alert" ng-show ="inscritos.length < 1"> Nenhum inscrito </div>
 	<table ng-show="inscritos.length > 0" class="table table-striped">
 		<tr>						
 			<th><a href="">Nome da aluno</a></th>			

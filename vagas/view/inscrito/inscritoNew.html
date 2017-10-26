@@ -10,7 +10,20 @@
 		</select> 
 		<select class="form-control" ng-model="inscrito.status" ng-options="statusOne as statusOne.statusNome for statusOne in status">
 			<option value="">Selecione a situação</option>
+		</select>		
+		<input type="checkbox" class="form-control"  placeholder="Mãe trabalhadoura">Mãe trabalhadora</input>
+		 		 
+		<select class="form-control" id="exampleFormControlSelect1">
+			<option value="">Selecione o número de filhos</option>
+			<option>0</option>
+			<option>1</option>
+		    <option>2</option>
+		    <option>3</option>
+			<option>4</option>
+			<option>5</option>
 		</select>
+		<input class="form-control" type="text" name="renda" ng-required="true" placeholder="Insira a renda familiar"/>
+			  
 		
 	</form>	
 	<hr/>
