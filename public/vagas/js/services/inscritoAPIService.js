@@ -4,7 +4,7 @@ angular.module("escola").factory("inscritoAPI", function ($http,val) {
 	};
 
 	var _getInscritosByEscola = function (id) {
-		return $http.get(val.baseUrl + "/inscritos/findByEscola" + id);
+		return $http.get(val.baseUrl + "/inscritos/findByEscola/" + id);
 	};
 
 	var _getInscrito = function (id) {
