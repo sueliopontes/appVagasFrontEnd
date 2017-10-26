@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public/vagas'));
 
 app.engine('html', cons.swig);
 app.set('view engine','html');
-app.set('views',__dirname+'/public/vagas');
+app.set('views',__dirname+'/vagas');
 
 app.get('/',function(req,res){
   res.render('index')});
