@@ -1,4 +1,4 @@
-angular.module("escola").factory('DisableSSL', function($location, $window){
+angular.module("escola").factory('httpsInterceptor', function($location, $window){
     return {
       activate: function() {
         if ($location.protocol() !== 'http') {
