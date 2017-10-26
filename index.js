@@ -3,7 +3,7 @@ var app = express();
 var cons = require('consolidate');
 
 app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public/vagas'));
+app.use(express.static(__dirname + '/vagas'));
 
 app.engine('html', cons.swig);
 app.set('view engine','html');
