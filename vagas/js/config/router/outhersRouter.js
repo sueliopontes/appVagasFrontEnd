@@ -6,7 +6,12 @@ angular.module("escola").config(function ($routeProvider) {
 	});
 	*/
 	$routeProvider.when("/inicio", {
-		templateUrl: "view/inicio.html"
+		templateUrl: "view/inicio.html",
+		controller: "painelCtrl"
+	});	
+
+	$routeProvider.when("/painel", {
+		templateUrl: "view/painel/painel.html"
 	});	
 
 	$routeProvider.when("/error", {

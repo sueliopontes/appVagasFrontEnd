@@ -21,9 +21,9 @@
 			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.aluno.mae | name}}</a></td>
 			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.turma.turmaNome | name}}</a></td>			
 			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.status.statusNome | name}}</a></td>
-			<td><a href="#/inscritoEditStatusEspera/{{inscrito.id}}"><img src="imagens/esperar.jpg" alt="Aguardando" height="32" width="32"></a></td>
-			<td><a href="#/inscritoEditStatusMatricular/{{inscrito.id}}"><img src="imagens/matricular.jpg" alt="Matricular" height="32" width="32"></a></td>	
-			<td><a href="#/inscritoEditStatusApagar/{{inscrito.id}}"><img src="imagens/excluir.png" alt="Excluir" height="32" width="32"></a></td>		
+			<td><a class="btn btn-primary btn-block" href="#/inscritoEditStatusAtender/{{inscrito.id}}">Atender</a></td>
+			<td><a class="btn btn-primary btn-block" href="#/inscritoEditStatusExcluir/{{inscrito.id}}">Apagar</a></td>	
+					
 		</tr>
 		
 	</table>

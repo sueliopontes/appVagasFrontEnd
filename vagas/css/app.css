@@ -1,3 +1,7 @@
+.body{
+	background-color: rgb(250, 250, 250);
+}
+
 .jumbotron {
 	
 	text-align: center;
@@ -6,6 +10,8 @@
 	margin-right: auto;
 	position: relative;
 	padding-top: 5px;
+	background-color: rgb(250, 250, 250);
+	
 }
 h3 {
 	margin-bottom: 30px;
@@ -43,7 +49,7 @@ hr {
 }
 .header{
 	width:100%;
-	height:10%;
+	height:min-content;
 	top:70;
 	left:0;			
 	background-color:#146836;
@@ -56,7 +62,7 @@ hr {
 
 .footer{
 	width:100%;
-	height:10%;
+	height:min-content;
 	top:70;
 	left:0;			
 	background-color:#146836;

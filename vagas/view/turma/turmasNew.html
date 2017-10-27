@@ -12,7 +12,7 @@
 		<select class="form-control" ng-model="turma.periodo" ng-options="periodo as periodo.periodoNome  for periodo in periodos">
 			<option value="">Selecione o período</option>
 		</select>
-		{{turma}}
+		
 	</form>	
 	<hr/>
 	<button class="btn btn-danger btn-block"  ng-click="adicionarTurma(turma)" ng-disabled="turmaForm.$invalid">Adicionar</button>
