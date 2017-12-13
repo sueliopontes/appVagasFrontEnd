@@ -1,6 +1,9 @@
 <div ng-include="'view/header.html'"></div>
 <div ng-include="'view/menu.html'"></div>
-<div class="jumbotron">
+<div>
+	<div class="alert alert-success" role="alert">Novo cadastro de turma da unidade escolar </div>
+<div>
+<div>
 	<form name="turmaForm">		
 		<select class="form-control" ng-model="turma.escola" ng-options="escola as escola.escolaNome for escola in escolas">
 			<option value="">Selecione uma escola</option>

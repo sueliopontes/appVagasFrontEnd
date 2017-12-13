@@ -1,15 +1,18 @@
 <!--<div ng-include="'view/header.html'"></div>-->
 
-	<div class="jumbotron">
-	<a class="btn btn-warning"   href="#login">Login</a>
-			<div class="alert alert-success" role="alert">Lista de espera </div>
-	<div>
-			<select class="form-control" ng-model="escola" ng-options="escola as escola.escolaNome for escola in escolas">
+<div class="container">	
+	<div class="alert alert-success" role="alert">Lista de espera 
+			
+	</div>
+<div>
+<div>
+	<select class="form-control col-md-6 col-sm-6 col-xs-6" whidt="200" ng-model="escola" ng-options="escola as escola.escolaNome for escola in escolas">
 		<option value="">Selecione uma escola</option>
 	</select> 
-	<button class="btn btn-danger btn-block"  ng-click="carregarInscritos(escola.escolaId)" ng-disabled="inscritoForm.$invalid">Exibir lista</button>
-</di>	
-	<div class="alert alert-warning" role="alert" ng-show ="inscritos.length < 1"> Nenhum inscrito </div>
+	<button class="btn btn-danger btn-block col-md-6 col-sm-6 col-xs-6"  ng-click="carregarInscritos(escola.escolaId)" ng-disabled="inscritoForm.$invalid">Exibir lista</button>
+</div>	
+<div class="alert alert-warning" role="alert" ng-show ="inscritos.length < 1"> Nenhum inscrito </div>
+<div>
 	<table ng-show="inscritos.length > 0" class="table table-striped">
 		<tr>						
 			<th><a href="">Nome da aluno</a></th>			
@@ -27,6 +30,8 @@
 			<td><a href="">{{inscrito.status.statusNome | name}}</a></td>
 		</tr>		
 	</table>
+	<center><a class="btn btn-success"   href="#login">Login</a></center>
+	
 </div>
 
 <div ng-include="'view/footer.html'"></div>

@@ -1,6 +1,9 @@
 <div ng-include="'view/header.html'"></div>
 <div ng-include="'view/menu.html'"></div>
-<div class="jumbotron">
+<div>
+	<div class="alert alert-success" role="alert">Cadastro de solicitações de vagas</div>
+<div>
+<div>
 	<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
 	<table ng-show="inscritos.length > 0" class="table table-striped">
 		<tr>
@@ -21,8 +24,8 @@
 			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.aluno.mae | name}}</a></td>
 			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.turma.turmaNome | name}}</a></td>			
 			<td><a href="#/inscritoEdit/{{inscrito.id}}">{{inscrito.status.statusNome | name}}</a></td>
-			<td><a class="btn btn-primary btn-block" href="#/inscritoEditStatusAtender/{{inscrito.id}}">Atender</a></td>
-			<td><a class="btn btn-primary btn-block" href="#/inscritoEditStatusExcluir/{{inscrito.id}}">Apagar</a></td>	
+			<td><a class="btn btn-primary" href="#/inscritoEditStatusAtender/{{inscrito.id}}">Atender</a></td>
+			<td><a class="btn btn-primary" href="#/inscritoEditStatusExcluir/{{inscrito.id}}">Apagar</a></td>	
 					
 		</tr>
 		

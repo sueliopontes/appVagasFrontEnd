@@ -1,10 +1,12 @@
-<html ng-app="escola">
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="escola">
 	<head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sistema Vagas</title>
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
-	<link rel="stylesheet" type="text/css" href="css/ui.css">
+
 
 	
 	<script src="lib/angular/angular.js"></script>
@@ -87,12 +89,6 @@
 
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 
-
-
-
-
-
-
 </head>
 	
 
@@ -100,9 +96,10 @@
 	<div class="jumbotron" ng-show="loading">
 		<h5>Carregando, por favor aguarde...</h5>
 	</div>
-	<div ng-hide="loading">		
+	<div ng-hide="loading" class="container">
+		<center><img src="/imagens/brasao.png" alt="Brasão" height="55" width="55"></center>	
 		<div ng-view></div>	
-		<center><img src="/imagens/brasao.png" alt="Brasão" height="45" width="45"></center>	
+		
 	</div>
 </body>
 </html>

@@ -1,6 +1,9 @@
 <div ng-include="'view/header.html'"></div>
 <div ng-include="'view/menu.html'"></div>
-<div class="jumbotron">
+<div>
+	<div class="alert alert-success" role="alert">Atualizar solicitação de vaga</div>
+<div>
+<div>
 		<form name="inscritoForm">
 			<input class="form-control" type="text" ng-model="inscrito aluno.alunoNome" name="alunoNome" ng-required="true" value="inscrito.aluno.alunoNome" placeholder="Nome do aluno"/>
 			<select class="form-control" ng-model="inscrito.turma" ng-options="turma as turma.turmaNome for turma in turmas">

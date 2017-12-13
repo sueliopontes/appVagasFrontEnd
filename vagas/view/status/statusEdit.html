@@ -1,6 +1,9 @@
 <div ng-include="'view/header.html'"></div>
 <div ng-include="'view/menu.html'"></div>
-<div class="jumbotron">
+<div>
+	<div class="alert alert-success" role="alert">Atualizar cadastro de status de solicitação</div>
+<div>
+<div>
 	<form name="statusForm">
 		<input class="form-control" type="text" ng-model="status.statusNome" name="statusNome" ng-required="true" value="status.statusNome" placeholder="Insira o nome do novo tipo de situação para cadastrar"/>
 	</form>	

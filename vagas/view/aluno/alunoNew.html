@@ -1,6 +1,9 @@
 <div ng-include="'view/header.html'"></div>
 <div ng-include="'view/menu.html'"></div>
-<div class="jumbotron">
+<div>
+	<div class="alert alert-success" role="alert">Adicionar novo cadastro de aluno</div>
+<div>
+<div>
 	<form name="alunoForm">
         <input class="form-control" type="text" ng-model="aluno.nome" name="nome" ng-required="true" placeholder="Insira o nome do aluno"/>
         <input class="form-control" type="text" ng-model="aluno.dataNascimento" name="dataNascimento" ng-required="true" placeholder="Insira a data de nascimentor"/>

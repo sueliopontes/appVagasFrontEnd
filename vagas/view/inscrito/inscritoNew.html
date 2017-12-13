@@ -1,6 +1,9 @@
 <div ng-include="'view/header.html'"></div>
 <div ng-include="'view/menu.html'"></div>
-<div class="jumbotron">
+<div>
+	<div class="alert alert-success" role="alert">Nova solicitação de vaga</div>
+<div>
+<div>
 	<form name="inscritoForm">
 		<select class="form-control" ng-model="inscrito.aluno" ng-options="aluno as aluno.nome for aluno in alunos">
 			<option value="">Selecione um aluno</option>
